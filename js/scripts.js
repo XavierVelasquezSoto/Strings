@@ -72,17 +72,37 @@ console.log(resultTwoText);
 //- Crear una función generateWord que reciba 3 palabras y genere una palabra usando 2 letras aleatorias de cada palabra. Por ejemplo, "Hola", "Adios" y "Mano" podrían generar "aldona".
 
 
-function generateWord(first,second,three){
-  const name = (first+second+three)
-  if(){
-    return Math.floor(Math.random(4)) * name.length
-  }
+function generateWord(textOne,textTwo,textThree){
+  let newWord = '';
+  newWord += textOne.charAt(Math.floor(Math.random() * textOne.length));
+  newWord += textOne.charAt(Math.floor(Math.random() * textOne.length));
+
+  newWord += textTwo.charAt(Math.floor(Math.random() * textTwo.length));
+  newWord += textTwo.charAt(Math.floor(Math.random() * textTwo.length));
+
+  newWord += textThree.charAt(Math.floor(Math.random() * textThree.length));
+  newWord += textThree.charAt(Math.floor(Math.random() * textThree.length));
+  
+  return newWord;
+
 }
 
-const resultGenerateWord = generateWord('la','ios','no');
-console.log(resultGenerateWord);
+const resultnewWord = generateWord('Hola','Adios','mano');
+console.log(resultnewWord);
+
+//- Crea una función que reciba un email e imprima por separado el nombre y el dominio. Por ejemplo, si recibe "dorian@gmail.com" deberá imprimir "El usuario es dorian" y por otro lado "El dominio es gmail.com".
+
+function email(gmail){
+
+}
 
 
+
+/* function emailWord(name,domain){
+  if(){}
+}
+
+ */
 
 
 
