@@ -1,3 +1,6 @@
+
+/* - Crea una funcion que reciba una palabra, si la palabra tiene más de 5 caracteres la imprimirá en mayúsculas, si no en  */
+/* 
 function upper(textA) {
   if (textA.length > 5) {
     console.log(textA.toUpperCase());
@@ -6,7 +9,103 @@ function upper(textA) {
   }
 }
 
-upper('holakjjnkjm');
+upper('bienvenido');
+upper('hello');
+ */
+function upper(textA) {
+  if (textA.length > 5) {
+    return textA.toUpperCase();
+  } else {
+    return textA.toLowerCase();
+  }
+}
+
+const resultUpper1 = upper('hola');
+console.log(resultUpper1);
+const resultUpper2 = upper('bievenido');
+console.log(resultUpper2);
+
+//- Crea una función que reciba una palabra e imprime por consola una letra aleatoria de esa palabra.
+
+/* function wordText(textA) {
+  const randomText = (Math.floor(Math.random() * textA.length))
+  if(textA && textA.length){
+    console.log(textA.charAt(randomText) )
+  }else{
+    console.log('error')
+  }
+  
+}
+
+wordText('xavier'); */
+
+function wordText(textA){
+  const randomText = (Math.floor(Math.random() * textA.length))
+    if(textA.length){
+      return textA.charAt(randomText)
+    }
+    return 'error'
+  
+}
+
+const resultWordText1 = wordText('xavier');
+console.log(resultWordText1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
+const word2 = 'palabra';
+
+console.log(word.charAt(word.length - 1));
+*/
+
+
+/* 
+
+const sayHello = (name,age) =>{
+  console.log('Hola ' + name + '. Tienes ' + age + ' y el año que viene tendrás' + (Number(age) + 1) + ' años.');
+}
+
+sayHello('Dorian', 36);
+
+const sayHello2 = (name,age) =>{
+  console.log (`Hola ${name}. Tienes ${age} y el año que viene tendrás ${age + 1} años.`);
+}
+
+sayHello2('Dorian', 36);
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 const number = 'hola';
@@ -151,10 +250,9 @@ const word = 'Hola y Adios';
 console.log(word.endsWith('adios'))
 
 const word = 'Hola y Adios';
-console.log(word.substring(0,4))   
+console.log(word.substring(0,4))   //el segundo (4) siempre llega a uno menos por eso dice "Hola". si no pones el segundo valor empezara del número hasta el final//
 
-//
-el segundo (4) siempre llega a uno menos por eso dice "Hola". si no pones el segundo valor empezara del número hasta el final//
+
 
 const word = 'Hola y Adios';
 console.log(word.endsWith('adios'))
