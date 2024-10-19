@@ -42,9 +42,9 @@ wordText('xavier'); */
 function wordText(textA){
   const randomText = (Math.floor(Math.random() * textA.length))
     if(textA.length){
-      return textA.charAt(randomText)
+      return textA.charAt(randomText);
     }
-    return 'error'
+    return 'error';
   
 }
 
@@ -52,18 +52,35 @@ const resultWordText1 = wordText('xavier');
 console.log(resultWordText1);
 
 
+// - Crea una función que reciba dos palabras y devuelva cuál de las dos es más larga. Si ambas palabras tienen la misma longitud, 
 
 
+function twoText(first, second){
+  if(first.length > second.length){
+    return first;
+  }else if ( first.length < second.length){
+    return second;
+  }
+    return 'Si son iguales'
+}
 
 
+const resultTwoText = twoText('zapatos', 'pato')
+console.log(resultTwoText);
 
 
+//- Crear una función generateWord que reciba 3 palabras y genere una palabra usando 2 letras aleatorias de cada palabra. Por ejemplo, "Hola", "Adios" y "Mano" podrían generar "aldona".
 
 
+function generateWord(first,second,three){
+  const name = (first+second+three)
+  if(){
+    return Math.floor(Math.random(4)) * name.length
+  }
+}
 
-
-
-
+const resultGenerateWord = generateWord('la','ios','no');
+console.log(resultGenerateWord);
 
 
 
