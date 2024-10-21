@@ -35,7 +35,7 @@ console.log(resultUpper2);
 
 /* function wordText(textA) {
   const randomText = (Math.floor(Math.random() * textA.length))
-  if(textA && textA.length){
+  if(textA.length){
     console.log(textA.charAt(randomText) )
   }else{
     console.log('error')
@@ -248,13 +248,7 @@ console.log(what);
 
 //18- Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice).
 
-/* function pato(maria){
 
-  let solucion = maria.substring(2,10)
-  return solucion
-}
-  solucion = pato("maria viajo cada dia");
-  console.log(solucion); */
 
 
 
