@@ -292,14 +292,34 @@ console.log(word.includes("p"));
 
  */
 
-function statement(name) {
+function statement(word1, word2) {
+  if (word1.includes(word2))  {
+    return "La palabra está en la frase";
+  }
+  return "La palabra no está en la frase"
+  
+}
+themeA = statement('El sol brilla tras las nubes',"nubes");
+console.log(themeA);
+
+
+//
+const cities = ("Madrid", "valencia", "lugo")
+
+console.log(cities.includes("Madrid"))
+
+
+/* function statement(name) {
   if (name.includes('nubes')) {
     return 'nubes esta en la frase';
   }
   return 'nubes no esta en la frase';
 }
 themeA = statement('El sol brilla tras las nubes.');
-console.log(themeA);
+console.log(themeA); */
+
+
+
 
 /*  
 const word2 = 'palabra';
@@ -308,6 +328,12 @@ console.log(word.charAt(word.length - 1));
 */
 
 /* 
+
+
+
+
+
+
 
 const sayHello = (name,age) =>{
   console.log('Hola ' + name + '. Tienes ' + age + ' y el año que viene tendrás' + (Number(age) + 1) + ' años.');
