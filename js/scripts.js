@@ -27,6 +27,10 @@ console.log(resultUpper1);
 const resultUpper2 = upper('bievenido');
 console.log(resultUpper2);
 
+
+
+
+
 //2- Crea una función que reciba una palabra e imprime por consola una letra aleatoria de esa palabra.
 
 /* function wordText(textA) {
@@ -54,6 +58,8 @@ const resultWordText1 = wordText('xavier');
 console.log(resultWordText1);
 
 
+
+
 //3- Crea una función que reciba dos palabras y devuelva cuál de las dos es más larga. Si ambas palabras tienen la misma longitud, 
 
 
@@ -69,6 +75,8 @@ function twoText(first, second){
 
 const resultTwoText = twoText('zapatos', 'pato')
 console.log(resultTwoText);
+
+
 
 
 //4- Crear una función generateWord que reciba 3 palabras y genere una palabra usando 2 letras aleatorias de cada palabra. Por ejemplo, "Hola", "Adios" y "Mano" podrían generar "aldona".
@@ -91,6 +99,9 @@ function generateWord(textOne, textTwo, textThree){
 
 const resultnewWord = generateWord('Hola','Adios','mano');
 console.log(resultnewWord);
+
+
+
 
 //5- Crea una función que reciba un email e imprima por separado el nombre y el dominio. Por ejemplo, si recibe "dorian@gmail.com" deberá imprimir "El usuario es dorian" y por otro lado "El dominio es gmail.com".
 
