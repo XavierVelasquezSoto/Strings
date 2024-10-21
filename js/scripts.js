@@ -94,16 +94,21 @@ console.log(resultnewWord);
 
 //5- Crea una función que reciba un email e imprima por separado el nombre y el dominio. Por ejemplo, si recibe "dorian@gmail.com" deberá imprimir "El usuario es dorian" y por otro lado "El dominio es gmail.com".
 
-
-
-function email(gmail){
-  const correo = gmail.indexOf("@");
-
-  return gmail.indexOf("");
-
+function account(user){
+  const acc = user.indexOf("@");
+  const nick = user.substring(0, 6);    // (0, acc)
+  const gmail = user.substring(7,16);   // (acc + 1)
+      
+  return " El usuario es " + nick + " El dominio es " + gmail;
 }
-const resultEmail = email("doran@gmail.com");
-console.log(resultEmail); 
+
+const newAcc = account("dorian@gmail.com")
+console.log(newAcc);
+
+
+
+
+
 
 
 //6- Crea una función que reciba una palabra de 5 letras y la devuelva intercalando mayúsculas y minúsculas, por ejemplo adios, sería aDiOs
@@ -156,6 +161,28 @@ console.log(resultFiveWords);
 
 //11- Crea una función que reciba una frase y devuelva la frase con el formato de título, es decir, que cada palabra comience con mayúscula. Por ejemplo, "hola mundo" se convertiría en "Hola Mundo".
 
+function world(nickA){
+  let qwer = ""
+
+  qwer += nickA.charAt(0).toUpperCase();
+  qwer += nickA.charAt(1).toLowerCase();
+  qwer += nickA.charAt(2).toLowerCase();
+  qwer += nickA.charAt(3).toLowerCase();
+
+  qwer += nickA.charAt(4).toLowerCase();
+
+  qwer += nickA.charAt(5).toUpperCase();
+  qwer += nickA.charAt(6).toLowerCase();
+  qwer += nickA.charAt(7).toLowerCase();
+  qwer += nickA.charAt(8).toLowerCase();
+  qwer += nickA.charAt(9).toLowerCase();
+
+
+  return qwer;
+}
+
+qwer = world("hola mundo");
+console.log(qwer);
 
 
 
@@ -163,14 +190,28 @@ console.log(resultFiveWords);
 
 
 
+function complete(name,lastName){
+  let analysis = name.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase() + ".";
+      return analysis
 
+}
 
+analysis = complete("carlos","pérez");
+console.log(analysis);
 
 
 //13- Crea una función que reciba 3 palabras y calcule el promedio de la longitud de esas palabras. Por ejemplo, si recibe "hola", "adiós" y "mundo", el promedio sería 4.67.
 
+function names(hola, adiós, mundo){
+  let all = hola.length + adiós.length + mundo.length;
+      result = all / 3;  
 
+    return result;
 
+}
+
+const what = names("hola","adiós","mundo");
+console.log(what);
 
 
 
@@ -196,11 +237,35 @@ console.log(resultFiveWords);
 
 //18- Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice).
 
+/* function pato(maria){
+
+  let solucion = maria.substring(2,10)
+  return solucion
+}
+  solucion = pato("maria viajo cada dia");
+  console.log(solucion); */
+
 
 
 
 //19- Crea una función que reciba una frase y una palabra, y te diga si la palabra está o no en la frase
 
+/* const word = "xavier";
+
+console.log(word.includes("p"));
+
+ */
+
+function statement(name){
+
+  if(name.includes("nubes")) {
+    return "nubes esta en la frase"
+  }
+    return "nubes no esta en la frase"
+
+}
+  themeA = statement("El sol brilla tras las nubes.");
+  console.log(themeA);
 
 
 
@@ -235,7 +300,6 @@ sayHello2('Dorian', 36);
 
 
  */
-
 
 
 
@@ -347,7 +411,7 @@ console.log(Math.floor(Math.random() * 11));
 
 console.log(Math.floor(Math.random() * Math.PI));
 
-const worde = 'Hola';
+const word = 'Hola';
 
 console.log(word.length);
   */
