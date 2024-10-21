@@ -169,7 +169,7 @@ average('Hola', 'Mundo', 'Javascript');
 
 //11- Crea una función que reciba una frase y devuelva la frase con el formato de título, es decir, que cada palabra comience con mayúscula. Por ejemplo, "hola mundo" se convertiría en "Hola Mundo".
 
-/* function world(nickA) {
+ function world(nickA) {
   let qwer = '';
 
   qwer += nickA.charAt(0).toUpperCase();
@@ -189,7 +189,7 @@ average('Hola', 'Mundo', 'Javascript');
 }
 
 qwer = world('hola mundo');
-console.log(qwer); */
+console.log(qwer); 
 
 //12- Crea una función que reciba un nombre y un apellido y devuelva las iniciales en mayúsculas. Por ejemplo, si recibe "Carlos Pérez", deberá devolver "C.P.".
 
@@ -203,8 +203,8 @@ console.log(analysis);
 
 //13- Crea una función que reciba 3 palabras y calcule el promedio de la longitud de esas palabras. Por ejemplo, si recibe "hola", "adiós" y "mundo", el promedio sería 4.67.
 
-function names(hola, adiós, mundo) {
-  let all = hola.length + adiós.length + mundo.length;
+function names(word1, word2, word3) {
+  let all = word1.length + word2.length + word3.length;
   result = all / 3;
 
   return result;
@@ -261,6 +261,20 @@ console.log(al);
 
 //16- Crea una función que reciba un número de dos dígitos y devuelva true si ambos dígitos son pares. Por ejemplo, si recibe 24, devolvería true, pero si recibe 23, devolvería false.
 
+/*
+function numberTrueFalse(number){
+  const num1 = Math.floor(number/10);
+  const num2 = number % 10;
+
+  if(num1 % 2 === 0 && num2 % 2 === 0){
+    return true;
+  }
+    return false
+}
+const resulTrue = numberTrueFalse(22);
+console.log(resulTrue);
+ */
+
 function numberTrueFalse(number) {
   const allTrue = String(number).charAt(0);
   const allTrue2 = String(number).charAt(1);
@@ -275,14 +289,66 @@ function numberTrueFalse(number) {
 const resulTrue = numberTrueFalse(22);
 console.log(resulTrue);
 
+
+
+
 //17- Crea una función que reciba dos palabras de 4 letras y verifique si contienen las mismas letras en diferente orden, por ejemplo "amor" y "mora"
+ /*
+function content(wordOne, wordTwo){
+  let fullContent = wordOne.substring(0,4) + wordTwo.substring(0,4)
+  
+  fullContent += wordOne.charAt(0) + wordTwo.charAt(1)
+  fullContent += wordOne.charAt(1) + wordTwo.charAt(2)
+  fullContent += wordOne.charAt(2) + wordTwo.charAt(3)
+  fullContent += wordOne.charAt(3) + wordTwo.charAt(0)
+
+   return 'Contiene las mismas letras';
+  
+}
+
+resultContent = content("amor","mora")
+console.log(resultContent); */
+
+/* function content(wordOne, wordTwo){
+ 
+  
+
+  if(wordOne.length !== 4 || wordTwo.length !== 4){
+    return "ambas tienen mismas letras"
+  }
+  
+  if(wordOne.charAt(0) === wordTwo.charAt(0) && 
+  wordOne.charAt(1) === wordTwo.charAt(1) && 
+  wordOne.charAt(2) === wordTwo.charAt(2) && 
+  wordOne.charAt(3) === wordTwo.charAt(3) || 
+  wordOne.charAt(0) === wordTwo.charAt(1) && 
+  wordOne.charAt(1) === wordTwo.charAt(2) && 
+  wordOne.charAt(2) === wordTwo.charAt(3) && 
+  wordOne.charAt(3) === wordTwo.charAt(0) ){
+    return "Contiene las mismas letras"
+  }
+
+
+   return 'No contiene las mismas letras';
+  
+}
+
+resultContent = content("amor","mora")
+console.log(resultContent); */
+
+
+
 
 //18- Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice).
 
-function string(word) {
-  word.substring(0, 4);
-  console.log('prueba');
+function table(word,number) {
+  let textWord = word.substring(0,number);
+
+    return textWord
+  
 }
+resultWord = table("Hola mundo",4)
+console.log(resultWord);
 
 //19- Crea una función que reciba una frase y una palabra, y te diga si la palabra está o no en la frase
 
@@ -304,9 +370,7 @@ console.log(themeA);
 
 
 //
-const cities = ("Madrid", "valencia", "lugo")
 
-console.log(cities.includes("Madrid"))
 
 
 /* function statement(name) {
