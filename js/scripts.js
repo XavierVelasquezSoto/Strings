@@ -142,12 +142,14 @@ fullname('xavier', 'perez');
 
 //8- Crea una función que reciba 2 verbos en infinitivo. La función debe imprimir a qué conjugación pertenecen. Por ejemplo, si la función recibe "andar" y "correr" debe imprimir "El verbo andar es de la primera conjugación y el verbo correr de la segunda conjugación".
 
-function verb(verb1, verb2){
-  const verbTotal = verb1.endsWith("ar")
+function verb(word1, word2){
+  const verb1 = word1.endsWith("ar")
+  const verb2 = word2.endsWith("er")
   
-  const verbTotal2 = verb2.endsWith("er")
+  let verbTotal = 
+
   
-  console.log (` El verbo ${verbTotal} es de la primera conjugación y  El verbo ${verbTotal2} de la segunda conjugación`);
+  console.log (`El verbo ${verb1} es de la primera conjugación y  El verbo ${verb2} de la segunda conjugación`);
 }
 
 verb("andar","correr")
@@ -169,7 +171,7 @@ function house(word) {
 const resultFourWords = house('casa');
 console.log(resultFourWords);
 
-//10- Crea una función que reciba 3 palabras y calcule cuántos caracteres tienen en total. Por ejemplo, si recibe "Hola", "Mundo" y "Javascript", deberá imprimir 1.
+//10- Crea una función que reciba 3 palabras y calcule cuántos caracteres tienen en total. Por ejemplo, si recibe "Hola", "Mundo" y "Javascript", deberá imprimir 19.
 
 function average(word1, word2, word3) {
   let total = word1.length + word2.length + word3.length;
