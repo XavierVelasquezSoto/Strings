@@ -152,24 +152,34 @@ function verb(word1, word2){
   console.log (`El verbo ${verb1} es de la primera conjugación y  El verbo ${verb2} de la segunda conjugación`);
 }
 
-verb("andar","correr")
+verb("dormir","correr")
 
 
 //9- Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac".
 
-function house(word) {
-  let allHouse = '';
+function invertWord(word) {
+  let reverseWord = '';
 
-  allHouse += word.charAt(3);
-  allHouse += word.charAt(2);
-  allHouse += word.charAt(1);
-  allHouse += word.charAt(0);
+  reverseWord += word.charAt(3);
+  reverseWord += word.charAt(2);
+  reverseWord += word.charAt(1);
+  reverseWord += word.charAt(0);
 
-  return allHouse;
+  return reverseWord;
 }
 
-const resultFourWords = house('casa');
+const resultFourWords = invertWord('casa');
 console.log(resultFourWords);
+
+
+/* function invertWord(word) {
+const reverseWord = word.characterArt(3) + word.characterArt(2) + word.characterArt(1) + word.characterArt(0);
+
+return reverseWord;
+}
+const resultInvertedWord = invertWord('casa');
+console.log(resultInvertedWord); */
+
 
 //10- Crea una función que reciba 3 palabras y calcule cuántos caracteres tienen en total. Por ejemplo, si recibe "Hola", "Mundo" y "Javascript", deberá imprimir 19.
 
