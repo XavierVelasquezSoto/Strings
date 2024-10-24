@@ -25,19 +25,6 @@ console.log(resultUpper1);
 const resultUpper2 = upper('bievenido');
 console.log(resultUpper2);
 
-/* 
-function wordUpperLower(word){
-  if(word.length > 5){
-    console.log(word.toUpperCase())
-  } else{
-   
-    console.log(word.toLowerCase())
-  }
-}
-
-
-
-*/
 
 //2- Crea una función que reciba una palabra e imprime por consola una letra aleatoria de esa palabra.
 
@@ -113,15 +100,12 @@ console.log(newAcc);
 //6- Crea una función que reciba una palabra de 5 letras y la devuelva intercalando mayúsculas y minúsculas, por ejemplo adios, sería aDiOs
 
 function fiveWords(word) {
-  let fiveText = '';
+  if(word.length !==5){
+    return "La palabra deberia tener 5 letras"
+  }
+  return word.charAt(0).toLowerCase() + word.charAt(1).toUpperCase() + word.charAt(2).toLowerCase() + word.charAt(3).toUpperCase() + word.charAt(4).toLowerCase()
 
-  fiveText += word.charAt(0).toUpperCase();
-  fiveText += word.charAt(1).toLowerCase();
-  fiveText += word.charAt(2).toUpperCase();
-  fiveText += word.charAt(3).toLowerCase();
-  fiveText += word.charAt(4).toUpperCase();
 
-  return fiveText;
 }
 
 const resultFiveWords = fiveWords('perro');
@@ -143,17 +127,26 @@ fullname('xavier', 'perez');
 //8- Crea una función que reciba 2 verbos en infinitivo. La función debe imprimir a qué conjugación pertenecen. Por ejemplo, si la función recibe "andar" y "correr" debe imprimir "El verbo andar es de la primera conjugación y el verbo correr de la segunda conjugación".
 
 function verb(word1, word2){
-  const verb1 = word1.endsWith("ar")
-  const verb2 = word2.endsWith("er")
-  
-  let verbTotal = 
+  let verb1 = "";
+  let verb2 = "";
 
-  
-  console.log (`El verbo ${verb1} es de la primera conjugación y  El verbo ${verb2} de la segunda conjugación`);
+
+  if(word1.endsWith("ar")){
+    verb1 = `El verbo ${word1} es la primera conjugación`;
+  }else if(word1.endsWith("er")){
+    verb1 = `El verbo ${word1} es la primera conjugación`;
+  }
+
+  if(word2.endsWith("ar")){
+    verb2 = `El verbo ${word2} es la segunda conjugación`;
+  }else if(word2.endsWith("er")){
+    verb2 = `El verbo ${word2} es la segunda conjugación`;
+  }
+  return `${verb1} y ${verb2}`
 }
 
-verb("dormir","correr")
-
+const resultVerb = verb("correr","caminar")
+console.log(resultVerb)
 
 //9- Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac".
 
@@ -173,7 +166,7 @@ console.log(resultFourWords);
 
 
 /* function invertWord(word) {
-const reverseWord = word.characterArt(3) + word.characterArt(2) + word.characterArt(1) + word.characterArt(0);
+const reverseWord = word.charAt(3) + word.charAt(2) + word.charAt(1) + word.charAt(0);
 
 return reverseWord;
 }
@@ -192,27 +185,19 @@ average('Hola', 'Mundo', 'Javascript');
 
 //11- Crea una función que reciba una frase y devuelva la frase con el formato de título, es decir, que cada palabra comience con mayúscula. Por ejemplo, "hola mundo" se convertiría en "Hola Mundo".
 
- function world(nickA) {
-  let qwer = '';
-
-  qwer += nickA.charAt(0).toUpperCase();
-  qwer += nickA.charAt(1).toLowerCase();
-  qwer += nickA.charAt(2).toLowerCase();
-  qwer += nickA.charAt(3).toLowerCase();
-
-  qwer += nickA.charAt(4).toLowerCase();
-
-  qwer += nickA.charAt(5).toUpperCase();
-  qwer += nickA.charAt(6).toLowerCase();
-  qwer += nickA.charAt(7).toLowerCase();
-  qwer += nickA.charAt(8).toLowerCase();
-  qwer += nickA.charAt(9).toLowerCase();
-
-  return qwer;
+ function letters(nickA) {
+  const spaceLetters = nickA.indexOf(" ");
+  const firstLetters = nickA.charAt(0).toUpperCase();
+  const restLetters1 = nickA.substring(1,spaceLetters)
+  const secondLetters = nickA.charAt(spaceLetters+1).toUpperCase();  
+  const restLetters2 = nickA.substring(spaceLetters+2)
+  
+  return firstLetters + restLetters1 + " " + secondLetters + restLetters2
+  
 }
 
-qwer = world('hola mundo');
-console.log(qwer); 
+resultNickA = letters('hola mundo');
+console.log(resultNickA); 
 
 //12- Crea una función que reciba un nombre y un apellido y devuelva las iniciales en mayúsculas. Por ejemplo, si recibe "Carlos Pérez", deberá devolver "C.P.".
 
@@ -316,48 +301,20 @@ console.log(resulTrue);
 
 
 //17- Crea una función que reciba dos palabras de 4 letras y verifique si contienen las mismas letras en diferente orden, por ejemplo "amor" y "mora"
- /*
+
 function content(wordOne, wordTwo){
-  let fullContent = wordOne.substring(0,4) + wordTwo.substring(0,4)
+  const firstWord = wordTwo.includes(wordOne.charAt(0))
+  const secondWord = wordTwo.includes(wordOne.charAt(1))
+  const thirdWord = wordTwo.includes(wordOne.charAt(2))
+  const fourWord = wordTwo.includes(wordOne.charAt(3))
+
+    return firstWord && secondWord && thirdWord && fourWord
   
-  fullContent += wordOne.charAt(0) + wordTwo.charAt(1)
-  fullContent += wordOne.charAt(1) + wordTwo.charAt(2)
-  fullContent += wordOne.charAt(2) + wordTwo.charAt(3)
-  fullContent += wordOne.charAt(3) + wordTwo.charAt(0)
-
-   return 'Contiene las mismas letras';
-  
-}
-
-resultContent = content("amor","mora")
-console.log(resultContent); */
-
-/* function content(wordOne, wordTwo){
- 
-  
-
-  if(wordOne.length !== 4 || wordTwo.length !== 4){
-    return "ambas tienen mismas letras"
-  }
-  
-  if(wordOne.charAt(0) === wordTwo.charAt(0) && 
-  wordOne.charAt(1) === wordTwo.charAt(1) && 
-  wordOne.charAt(2) === wordTwo.charAt(2) && 
-  wordOne.charAt(3) === wordTwo.charAt(3) || 
-  wordOne.charAt(0) === wordTwo.charAt(1) && 
-  wordOne.charAt(1) === wordTwo.charAt(2) && 
-  wordOne.charAt(2) === wordTwo.charAt(3) && 
-  wordOne.charAt(3) === wordTwo.charAt(0) ){
-    return "Contiene las mismas letras"
-  }
-
-
-   return 'No contiene las mismas letras';
   
 }
 
-resultContent = content("amor","mora")
-console.log(resultContent); */
+const resultContent = content("amor","mora")
+console.log(resultContent);
 
 
 
@@ -365,12 +322,11 @@ console.log(resultContent); */
 //18- Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice).
 
 function table(word,number) {
-  let textWord = word.substring(0,number);
-
-    return textWord
+ 
+  return word.substring(0, number)
   
 }
-resultWord = table("Hola mundo",4)
+const resultWord = table("Hola mundo",4)
 console.log(resultWord);
 
 //19- Crea una función que reciba una frase y una palabra, y te diga si la palabra está o no en la frase
